@@ -1,0 +1,38 @@
+Project structure saved to project-structure.txt
+------------------------------------
+📄 Makefile
+📄 Readme
+📁 api-gateway/
+    📁 docker/
+        📄 Dockerfile
+    📁 k8s/
+        📄 api-gateway-configmap.yaml
+        📄 api-gateway-deployment.yaml
+        📄 api-gateway-service.yaml
+    📁 src/
+        📄 kong.yml
+📁 infra/
+    📁 k8s/
+        📄 consul-deployment.yaml
+        📄 elasticsearch-deployment.yaml
+        📄 kafka-deployment.yaml
+        📄 mongodb-deployment.yaml
+        📄 namespace.yaml
+        📄 postgres-deployment.yaml
+        📄 redis-deployment.yaml
+        📄 vault-deployment.yaml
+📁 load-balancer/
+    📁 docker/
+        📄 Dockerfile
+    📁 k8s/
+        📄 load-balancer-deployment.yaml
+        📄 load-balancer-service.yaml
+    📁 src/
+        📄 nginx.conf
+📁 make-scripts/
+    📄 api-gateway.mk
+    📄 infra.mk
+    📄 load-balancer.mk
+    📄 namespace.mk
+📄 proj.sh
+📄 project-structure.txt

@@ -1,0 +1,9 @@
+# File: api-gateway/k8s/gateway-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kong-config
+  namespace: chat-app
+data:
+  kong.yml: |
+    # content of kong.yml here or mount from src folder

@@ -1,0 +1,10 @@
+# infra/k8s/namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: chat-infra
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: chat-app

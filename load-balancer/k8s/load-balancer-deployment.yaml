@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lb-nginx
+  namespace: chat-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lb-nginx
+  template:
+    metadata:
+      labels:
+        app: lb-nginx
+    spec:
+      containers:
+      - name: lb-nginx
+        image: load-balancer/lb-nginx:latest
+        ports:
+        - containerPort: 80

@@ -1,0 +1,7 @@
+# Chat App
+
+### Required Tools
+- docker
+- helm
+- kind (to create/start k8s locally)
+- kubernetes cluster

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kong-gateway
+  namespace: chat-app
+  labels:
+    app: kong
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kong
+  template:
+    metadata:
+      labels:
+        app: kong
+    spec:
+      containers:
+      - name: kong
+        image: api-gateway/kong-custom:latest
+        ports:
+        - containerPort: 8000
+        - containerPort: 8443
+        - containerPort: 8001
+        - containerPort: 8444
+        volumeMounts:
+        - name: kong-config
+          mountPath: /usr/local/kong/declarative
+      volumes:
+      - name: kong-config
+        configMap:
+          name: kong-config
