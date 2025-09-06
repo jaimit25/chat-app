@@ -1,6 +1,6 @@
-#Chat App
+# Chat App
 
-###Required Tools
+### Required Tools
 - docker
 - helm
 - kind (to create/start k8s locally)
