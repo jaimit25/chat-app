@@ -7,12 +7,12 @@ NAMESPACE=chat-infra
 infra-create:
 	@echo "☸️ Creating chat app infra..."
 	kubectl apply -f infra/k8s/namespace.yaml
-	kubectl apply -f infra/k8s/redis-deployment.yaml
-	kubectl apply -f infra/k8s/kafka-deployment.yaml
-	kubectl apply -f infra/k8s/postgres-deployment.yaml
-	kubectl apply -f infra/k8s/mongodb-deployment.yaml
-	kubectl apply -f infra/k8s/vault-deployment.yaml
-	kubectl apply -f infra/k8s/consul-deployment.yaml
+	# kubectl apply -f infra/k8s/redis-deployment.yaml
+	# kubectl apply -f infra/k8s/kafka-deployment.yaml
+	# kubectl apply -f infra/k8s/postgres-deployment.yaml
+	# kubectl apply -f infra/k8s/mongodb-deployment.yaml
+	# kubectl apply -f infra/k8s/vault-deployment.yaml
+	# kubectl apply -f infra/k8s/consul-deployment.yaml
 	# kubectl apply -f infra/k8s/elasticsearch-deployment.yaml
 	@echo "✅ Infra created"
 

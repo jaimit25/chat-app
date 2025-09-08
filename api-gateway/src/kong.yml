@@ -1,29 +1,12 @@
 _format_version: "2.1"
 services:
-  - name: chat-service
-    url: http://chat-service.default.svc.cluster.local:8080
-    routes:
-      - name: chat-route
-        paths:
-          - /chat
-        methods:
-          - GET
-          - POST
-
   - name: user-service
-    url: http://user-service.default.svc.cluster.local:8080
+    url: http://user-service.chat-app.svc.cluster.local:8080
     routes:
       - name: user-route
         paths:
-          - /user
+          - "/api/helloworld"
+        strip_path: false
         methods:
           - GET
           - POST
-plugins:
-  - name: rate-limiting
-    service: chat-service
-    config:
-      minute: 60
-      policy: local
-  - name: key-auth
-    service: user-service

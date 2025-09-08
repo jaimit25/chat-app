@@ -1,11 +1,10 @@
 GATEWAY_DIR=api-gateway
-IMAGE_NAME=api-gateway/kong:latest
-K8S_DIR=$(GATEWAY_DIR)/k8s
+K8S_DIR=api-gateway/k8s
 
 .PHONY: api-gateway-build
 api-gateway-build:
 	@echo "🚀 Building API Gateway Docker image..."
-	docker build -t $(IMAGE_NAME) -f $(GATEWAY_DIR)/docker/Dockerfile $(GATEWAY_DIR)
+	docker build -t api-gateway/kong:v1 -f api-gateway/docker/Dockerfile api-gateway
 
 .PHONY: api-gateway-deploy
 api-gateway-deploy:

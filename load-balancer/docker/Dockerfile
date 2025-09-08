@@ -1,6 +1,5 @@
 FROM nginx:stable-alpine
 
-# Copy custom NGINX config into container
 COPY ../src/nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80

@@ -17,12 +17,17 @@ spec:
     spec:
       containers:
       - name: kong
-        image: api-gateway/kong-custom:latest
+        image: api-gateway/kong:v1
         ports:
         - containerPort: 8000
         - containerPort: 8443
         - containerPort: 8001
         - containerPort: 8444
+        env:
+        - name: KONG_DATABASE
+          value: "off"
+        - name: KONG_DECLARATIVE_CONFIG
+          value: /usr/local/kong/declarative/kong.yml
         volumeMounts:
         - name: kong-config
           mountPath: /usr/local/kong/declarative

@@ -1,9 +1,7 @@
-IMAGE_NAME=load-balancer/lb-nginx:latest
-
 .PHONY: load-balancer-build
 load-balancer-build:
 	@echo "🚀 Building Docker image for Load Balancer..."
-	docker build -t $(IMAGE_NAME) -f load-balancer/docker/Dockerfile load-balancer
+	docker build -t load-balancer/lb-nginx:v1 -f load-balancer/docker/Dockerfile load-balancer
 
 .PHONY: load-balancer-deploy
 load-balancer-deploy:

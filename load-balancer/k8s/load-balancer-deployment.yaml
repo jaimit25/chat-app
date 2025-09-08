@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: lb-nginx
-        image: load-balancer/lb-nginx:latest
+        image: load-balancer/lb-nginx:v1
         ports:
         - containerPort: 80
